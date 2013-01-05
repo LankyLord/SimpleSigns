@@ -21,10 +21,10 @@ public class SignListener implements Listener{
         }
         
         for (int i = 0; i <= 3; i++) {
-            String linie = event.getLine(i);
-            linie = linie.replace("&", "§");
-            linie = linie.replace("&", "§");
-            event.setLine(i, linie);
+            String line = event.getLine(i);
+            line = line.replace("&", "§");
+            line = line.replace("&", "§");
+            event.setLine(i, line);
         }
     }
 }
