@@ -1,0 +1,13 @@
+name: ColouredSigns
+version: 1.0
+description: A plugin to allow the use of formatting codes on signs.
+author: Lanky_Lord
+website: https://github.com/LankyLord/ColouredSigns
+
+main: com.github.lankylord.ColouredSigns
+database: false
+
+permissions:
+  colouredsigns.colour:
+    description: Allows you to use formatting codes on signs.
+    default: true
