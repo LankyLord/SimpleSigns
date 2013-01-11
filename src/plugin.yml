@@ -9,5 +9,5 @@ database: false
 
 permissions:
   colouredsigns.colour:
-    description: Allows you to use formatting codes on signs.
+    description: Allows you to use colours on signs.
     default: true

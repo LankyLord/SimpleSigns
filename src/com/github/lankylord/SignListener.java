@@ -19,11 +19,10 @@ public class SignListener implements Listener{
         if (!player.hasPermission("colouredsigns.colour")){
             return;
         }
-        
         for (int i = 0; i <= 3; i++) {
             String line = event.getLine(i);
-            line = line.replace("&", "§");
-            line = line.replace("&", "§");
+            line = line.replaceAll("&(?<!&&)(?=[0-9a-fA-F])", "\u00A7")
+                    .replace("&&", "&");
             event.setLine(i, line);
         }
     }
