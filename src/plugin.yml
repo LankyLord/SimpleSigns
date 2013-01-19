@@ -1,13 +1,13 @@
-name: ColouredSigns
+name: SimpleColouredSigns
 version: 1.0
 description: A plugin to allow the use of formatting codes on signs.
 author: Lanky_Lord
-website: https://github.com/LankyLord/ColouredSigns
+website: https://github.com/LankyLord/SimpleColouredSigns
 
-main: com.github.lankylord.ColouredSigns
+main: com.github.lankylord.SimpleColouredSigns
 database: false
 
 permissions:
-  colouredsigns.colour:
+  scs.colour:
     description: Allows you to use colours on signs.
     default: true
