@@ -7,16 +7,16 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
 
 public class SignListener implements Listener{
-    ColouredSigns plugin;
+    SimpleColouredSigns plugin;
     static final Logger logger = Logger.getLogger("Minecraft");
-    public SignListener(ColouredSigns instance) {
+    public SignListener(SimpleColouredSigns instance) {
         this.plugin = instance;
     }
     
     @EventHandler
     public void onSignChange(SignChangeEvent event) {
         Player player = event.getPlayer();
-        if (!player.hasPermission("colouredsigns.colour")){
+        if (!player.hasPermission("scs.colour")){
             return;
         }
         for (int i = 0; i <= 3; i++) {

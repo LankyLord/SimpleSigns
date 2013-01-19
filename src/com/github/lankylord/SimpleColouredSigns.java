@@ -7,13 +7,13 @@ import org.bukkit.block.Block;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ColouredSigns extends JavaPlugin{
+public class SimpleColouredSigns extends JavaPlugin{
     public HashMap<String, Block> sign = new HashMap();
     static final Logger logger = Logger.getLogger("Minecraft");
 
     @Override
     public void onDisable() {
-        logger.info("[ColouredSigns] Plugin disabled.");
+        logger.info("[SimpleColouredSigns] Plugin disabled.");
     }
     
     @Override
@@ -21,7 +21,7 @@ public class ColouredSigns extends JavaPlugin{
         Listeners();
         PluginDescriptionFile pdfFile;
         pdfFile = getDescription();
-        logger.log(Level.INFO, "[ColouredSigns] Plugin version {0} enabled.",
+        logger.log(Level.INFO, "[SimpleColouredSigns] Plugin version {0} enabled.",
                 pdfFile.getVersion());
     }
     
