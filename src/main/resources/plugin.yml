@@ -1,0 +1,13 @@
+name: SimpleSigns
+version: 1.1
+description: A plugin to allow the use of formatting codes on signs.
+author: Lanky_Lord
+website: https://github.com/LankyLord/SimpleColouredSigns
+
+main: com.github.lankylord.SimpleColouredSigns
+database: false
+
+permissions:
+  scs.colour:
+    description: Allows you to use colours on signs.
+    default: true
