@@ -6,17 +6,19 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.SignChangeEvent;
 
-public class SignListener implements Listener{
+public class SignListener implements Listener {
+
     SimpleSigns plugin;
     static final Logger logger = Logger.getLogger("Minecraft");
+
     public SignListener(SimpleSigns instance) {
         this.plugin = instance;
     }
-    
+
     @EventHandler
     public void onSignChange(SignChangeEvent event) {
         Player player = event.getPlayer();
-        if (!player.hasPermission("scs.colour")){
+        if (!player.hasPermission("scs.colour")) {
             return;
         }
         for (int i = 0; i <= 3; i++) {

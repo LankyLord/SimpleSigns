@@ -7,7 +7,8 @@ import org.bukkit.block.Block;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class SimpleSigns extends JavaPlugin{
+public class SimpleSigns extends JavaPlugin {
+
     public HashMap<String, Block> sign = new HashMap();
     static final Logger logger = Logger.getLogger("Minecraft");
 
@@ -15,7 +16,7 @@ public class SimpleSigns extends JavaPlugin{
     public void onDisable() {
         logger.info("[SimpleColouredSigns] Plugin disabled.");
     }
-    
+
     @Override
     public void onEnable() {
         Listeners();
@@ -24,9 +25,9 @@ public class SimpleSigns extends JavaPlugin{
         logger.log(Level.INFO, "[SimpleColouredSigns] Plugin version {0} enabled.",
                 pdfFile.getVersion());
     }
-    
+
     public void Listeners() {
-        getServer().getPluginManager().registerEvents(new SignListener(this), 
+        getServer().getPluginManager().registerEvents(new SignListener(this),
                 this);
     }
 }
