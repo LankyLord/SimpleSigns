@@ -18,7 +18,7 @@ public class SignListener implements Listener {
     @EventHandler
     public void onSignChange(SignChangeEvent event) {
         Player player = event.getPlayer();
-        if (!player.hasPermission("scs.colour")) {
+        if (!player.hasPermission("simplesigns.colour")) {
             return;
         }
         for (int i = 0; i <= 3; i++) {

@@ -1,5 +1,6 @@
 package com.github.lankylord.SimpleSigns;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,6 +25,11 @@ public class SimpleSigns extends JavaPlugin {
         pdfFile = getDescription();
         logger.log(Level.INFO, "[SimpleColouredSigns] Plugin version {0} enabled.",
                 pdfFile.getVersion());
+        try {
+            MetricsLite metrics = new MetricsLite(this);
+            metrics.start();
+        } catch (IOException e) {
+        }
     }
 
     public void Listeners() {
