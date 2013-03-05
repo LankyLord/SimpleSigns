@@ -15,7 +15,7 @@ public class SimpleSigns extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        logger.info("[SimpleColouredSigns] Plugin disabled.");
+        logger.info("[SimpleSigns] Plugin disabled.");
     }
 
     @Override
@@ -23,7 +23,7 @@ public class SimpleSigns extends JavaPlugin {
         Listeners();
         PluginDescriptionFile pdfFile;
         pdfFile = getDescription();
-        logger.log(Level.INFO, "[SimpleColouredSigns] Plugin version {0} enabled.",
+        logger.log(Level.INFO, "[SimpleSigns] Plugin version {0} enabled.",
                 pdfFile.getVersion());
         try {
             MetricsLite metrics = new MetricsLite(this);
