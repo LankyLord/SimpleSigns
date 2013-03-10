@@ -1,6 +1,7 @@
 package com.github.lankylord.SimpleSigns;
 
 import java.util.logging.Logger;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,11 +22,9 @@ public class SignListener implements Listener {
         if (!player.hasPermission("simplesigns.colour")) {
             return;
         }
-        for (int i = 0; i <= 3; i++) {
-            String line = event.getLine(i);
-            line = line.replaceAll("&(?<!&&)(?=[0-9a-fA-F])", "\u00A7")
-                    .replace("&&", "&");
-            event.setLine(i, line);
+        String[] lines = event.getLines();
+        for (int i = 0; i < lines.length; i++) {
+            event.setLine(i, ChatColor.translateAlternateColorCodes('&', lines[i]));
         }
     }
 }
